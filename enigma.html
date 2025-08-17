@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(img/fundo.png);
+            color: #2bff00;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+            background-color: #000000;
+            color: #fff;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #fff;
+            border-color: #000000;
+            outline: none;
+        }
+        #resultado {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <img id="enigma" src="img/morse.png" alt="" width="90%">
+    <br>
+    <br>
+    <img src="img/morsetabela.jpg" alt="" width="90%">
+    <br>
+    <br>
+    <input type="text" id="resposta">
+    <button onclick="verificar()">⏎</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            const entrada = document.getElementById("resposta").value.trim().toLowerCase();
+            const resultado = document.getElementById("resultado");
+            const enigmaImg = document.getElementById("enigma");
+
+            if (entrada=="penicius") {
+                window.location.href = "ghoul.html";
+            } else {
+                resultado.textContent = "Errou, lixo.";
+                enigmaImg.src = "img/resposta.png";
+            }
+
+            document.getElementById("resposta").value = "";
+        }
+
+            // Detectar Enter
+            document.getElementById("resposta").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                verificar();
+            }
+        });
+    </script>
+
+</body>
+</html>
