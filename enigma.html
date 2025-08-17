@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
         body {
@@ -10,17 +10,20 @@
             margin-top: 50px;
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(img/fundo.png);
             color: #2bff00;
+            max-width: 480px;
         }
+
         input {
             padding: 10px;
             font-size: 30px;
             width: 70%;
-            height: 50px;
+            height: auto;
             text-align: center;
             background-color: #000000;
             color: #fff;
             outline: none;
         }
+
         button {
             padding: 10px;
             font-size: 30px;
@@ -30,27 +33,33 @@
             color: #fff;
             border-color: #000000;
             outline: none;
-            height: 74px;
+            height: 58px;
         }
-        .interacao {
-            width="90%";
-        }
+
         #resultado {
             margin-top: 30px;
             font-size: 18px;
         }
-        .title {
-        text-align: center;
-        margin-bottom: 12px;
-        font-weight: 600;
-        letter-spacing: .2px;
+
+        img {
+            max-width: 480px;
+        }
+
+        .interacao {
+            max-width: 480px;
+        }
+
+        input {
+            max-width: 480px;
+        }
+
+        h1 {
+            max-width: 480px;
         }
     </style>
 </head>
 <body>
-    <div class="title">
-        <h1>?</h1>
-    </div>
+    <h1>?</h1>
     <img id="enigma" src="img/morse.png" alt="" width="90%">
     <br>
     <br>
@@ -93,7 +102,6 @@
 
 </body>
 </html>
-
 
 
 
